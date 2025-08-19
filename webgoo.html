@@ -6,68 +6,81 @@
 <title>وبگو | ایجاد لیست در صفحات وب</title>
 <!-- Webgoo.ir -->
 <style>
-body{
-    font-family:Tahoma, Geneva, sans-serif;
-    font-size:12px;
-    direction:rtl;
+table{
+    margin-left:auto;
+    margin-right:0;
+    width: 200px;
 }
 </style>
 </head>
 <body>
-<b>لیست های شماره ای مرتب شده:</b><br>
-<!-- شروع لیست -->
-<ol type="I">
-<li>آموزش</li>
-<li>مقدماتی</li>
-<li>HTML</li>
-<li>تگ ها</li>
-</ol>
-<!-- پایان لیست -->
-<hr>
-<b>لیست های عادی مرتب نشده:</b><br />
-<!-- شروع لیست -->
-<ul type="square">
-<li>تگ ol</li>
-<li>تگ ul</li>
-<li>تگ li</li>
-<li>تگ dl</li>
-</ul>
-<!-- پایان لیست -->
-<hr>
-<b>لیست های تو در تو:</b><br>
-<!-- شروع لیست -->
-<ul>
-<li>لیست اصلی بدون زیر مجموعه</li>
-<li>
-لیست اصلی با زیر مجموعه
-<ul><li>لیست فرعی و زیر مجموعه اول
-<ul><li>لیست فرعی و زیر مجموعه دوم</li></ul></li></ul>
-</li>
-</ul>
-<!-- پایان لیست -->
-<!-- شروع لیست -->
-<ol>
-<li>لیست اصلی بدون زیر مجموعه</li>
-<li>
-لیست اصلی با زیر مجموعه
-<ol><li>لیست فرعی و زیر مجموعه اول
-<ol><li>لیست فرعی و زیر مجموعه دوم</li></ol></li></ol>
-</li>
-</ol>
-<!-- پایان لیست -->
-<hr>
-<b>لیست های توصیفی:</b><br>
-<!-- شروع لیست -->
-<dl>
-<dt>آموزش</dt>
-<dd>برنامه نویسی</dd>
-<dt>سطح</dt>
-<dd>مقدماتی</dd>
-<dt>مبحث</dt>
-<dd>تگ های HTML</dd>
-<dt>تمرین</dt>
-<dd>تگ های لیست</dd>
-</dl>
-<!-- پایان لیست -->
+<table border="2" bgcolor="#0066cc"  cellpadding="8" cellspacing="12" height="300" rules="rows">
+    <caption>عنوانی برای جدول</caption>
+<tr>
+    <th colspan="2">تیتر جدول</th>
+   </tr> <tr>
+<td>آدرس دهی نسبی</td>
+</tr>
+</table>
+<table background="C:\Users\Mona\Desktop\webgoo\img\download (5).jfif">
+<tr>
+<td>آدرس دهی مطلق</td>
+</tr>
+<table border="1" bordercolor="#FF6600" bordercolorlight="#FF6600" bordercolordark="#FF6600">
+<tr>
+<td>اطلاعات جدول</td>
+</tr><tr>
+<td>نشانه گر ماوس را در این قسمت نگهدارید</td>
+</tr>
+
+</table>
+</table>
+<table border="1" cellpadding="8" cellspacing="12" height="200" width="200" title="عنوانی برای جدول">
+    <colgroup>
+<col style="background-color:rgb(0, 225, 255);">
+<col style="background-color:rgb(255, 0, 234);">
+
+</colgroup>
+    <tr>
+<th>تیتر جدول</th>
+<th>تیتر جدول</th>
+</tr>
+</table>
+<style>
+#table-1, #table-1 td {
+    border: 1px solid #E5E5E5;
+}
+#table-1 thead {
+    background-color:#6CF;
+}
+#table-1 tbody {
+    background-color:#CCC;
+}
+#table-1 tfoot {
+    background-color:#FC0;
+    text-align: center;
+}
+</style>
+<table id="table-1">
+<thead>
+<tr>
+<th>تیتر جدول</th>
+<th>تیتر جدول</th>
+<th>تیتر جدول</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>محتوای جدول</td>
+<td>محتوای جدول</td>
+<td>محتوای جدول</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="3">محتوای جدول</td>
+</tr>
+</tfoot>
+</table>
 </body>
 </html>

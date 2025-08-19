@@ -2,48 +2,52 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>وبگو | استفاده از فرم در صفحات وب</title>
+<title>وبگو | کاربرد تگ div در html</title>
 <!-- https://webgoo.ir -->
 <style type="text/css">
 body{
     font-family:Tahoma, Geneva, sans-serif;
-    font-size:12px;
     direction:rtl;
-    line-height:20px;    
+    font-size:12px;
 }
-label{
-    width:100px;
-    height:25px;
+.paged{
     display:inline-block;
-    vertical-align:top;
+    padding:4px;
+    border:1px solid #09C;
+    margin:2px;
+    text-align:center;
+}
+.light{
+    color:#69F;
+    text-decoration:blink;
 }
 </style>
 </head>
 <body>
-<form action="form-get.php" method="post">
-<label for="name">نام:</label>
-<input type="text" name="name" id="name" maxlength="255" />
-<br />
-<label for="pass">رمز:</label>
-<input type="password" name="pass" id="pass" maxlength="255" />
-<br />
-<label for="pass">کشور:</label>
-<select name="country" id="country">
-<option value="" selected="selected">انتخاب کنید</option>
-<option value="Iran">ایران</option>
-<option value="Japan">ژاپن</option>
-<option value="Afghanistan">افغانستان</option>
-<option value="Germany">آلمان</option>
-<option value="Australia">استرالیا</option>
-</select>
-<br />
-<label for="text">یادداشت:</label>
-<textarea name="text" id="text" cols="30" rows="6">
-</textarea>
-<br />
-<input type="submit" value="ارسال" />
-</form>
+<!-- بلاک اصلی -->
+<div style="display:block; width:600px; height:auto; border:1px solid #999; background-color:#9CF; margin:0 auto; direction:rtl; padding:4px;">
+بلاک div شماره 1
+<!-- بلاک زیر مجموعه -->
+<div style="display:inline-block; width:200px; height:200px; border:1px solid #999; background-color:#6C9; float:left; margin:4px;">
+بلاک div شماره 2
+</div>
+<!-- بلاک زیر مجموعه -->
+<div style="display:inline-block; width:200px; height:200px; border:1px solid #999; background-color:#FC0; float:left; margin:4px;">
+بلاک div شماره 3
+</div>
+<!-- بلاک جدا کننده -->
+<div style="clear:both;"></div>
+<!-- بلاک زیر مجموعه -->
+<div style="display:block; width:590px; height:50px; border:1px solid #999; background-color:#CCC; margin:4px;">
+بلاک div شماره 4
+</div>
+<!-- بلاک جدا کننده -->
+<div style="clear:both;"></div>
+<!-- بستن بلاک اصلی -->
+</div>
 <hr />
-اطلاعات فرم بالا پس از ارسال (متد post)، به فایلی با نام فرضی form-get.php فرستاده شده و پردازش می شود.
+با استفاده از تنظیم بلاک های div به صورت تو در تو و بهره بردن از css، طراحان وب قالب ها و طرح های خود را فرمت بندی می کنند.
+<span class="paged">صفحه 1</span>
+تگ <span class="light">span</span> به طور پیش فرض به صورت هم سطح یا inline پردازش می شود و به این دلیل در برخی موارد بهترین گزینه برای طراحان وب است.
 </body>
 </html>

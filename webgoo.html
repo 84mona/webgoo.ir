@@ -4,175 +4,54 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>وبگو | ترسیم جداول در صفحات وب</title>
-<!-- Webgoo.ir -->
-<style>
-body {
-    font-family: Tahoma, Geneva, sans-serif;
-    font-size: 12px;
-    direction: rtl;
-}
-#table-1 {
-    width: 400px;
-    margin: 0 auto;
-    text-align: center;
-    border: 1px solid #E5E5E5;
-}
-#table-1 th {
-    background: #CCC;
-    border: 1px solid #E5E5E5;
-}
-#table-1 td {
-    padding: 2px;
-    margin: 2px;
-    border: 1px solid #E5E5E5;
-}
-#table-2 {
-    width: 400px;
-    margin: auto 0 auto auto;
-    text-align: center;
-    border: 1px solid #E5E5E5;
-}
-#table-2 th {
-    background: #CCC;
-    border: 1px solid #E5E5E5;
-}
-#table-2 td {
-    padding: 2px;
-    margin: 2px;
-    border: 1px solid #E5E5E5;
-}
-#table-3 {
-    width: 400px;
-    margin: auto auto auto 0;
-    text-align: center;
-    border: 1px solid #E5E5E5;
-}
-#table-3 th {
-    background: #CCC;
-    border: 1px solid #E5E5E5;
-}
-#table-3 td {
-    padding: 2px;
-    margin: 2px;
-    border: 1px solid #E5E5E5;
-}
-#table-4 {
-    width: 400px;
-    margin: auto 0 auto auto;
-    text-align: center;
-    border: 1px solid #E5E5E5;
-}
-#table-4 th {
-    background: #CCC;
-    border: 1px solid #E5E5E5;
-}
-#table-4 td {
-    padding: 2px;
-    margin: 2px;
-    border: 1px solid #E5E5E5;
-}
-.col-1 {
-    background-color:#6CF;
-}
-.col-2 {
-    background-color:#CF0;
-}
-.col-3 {
-    background-color:#FC0;
-}
-.clear {
-   width: 100%;
-   clear: both;
-}
-</style>
 </head>
-<body>
-<!-- جدول شماره 1 -->
-<table id="table-1">
-<caption>
-جدول شماره 1
-</caption>
-<tr>
-<th colspan="2">تیتر th colspan</th>
-<th>تیتر th</th>
-</tr>
-<tr>
-<td>سلول td 1</td>
-<td>سلول td 2</td>
-<td>سلول td 3</td>
-</tr>
-<tr>
-<td>سلول td 4</td>
-<td>سلول td 5</td>
-<td>سلول td 6</td>
-</tr>
-</table>
-<!-- جدول شماره 2 -->
-<table id="table-2">
-<caption>
-جدول شماره 2
-</caption>
-<colgroup>
-<col class="col-1">
-<col class="col-2">
-<col class="col-3">
-</colgroup>
-<tr>
-<th>تیتر جدول</th>
-<th>تیتر جدول</th>
-<th>تیتر جدول</th>
-</tr>
-<tr>
-<td>محتوای جدول</td>
-<td>محتوای جدول</td>
-<td>محتوای جدول</td>
-</tr>
-<tr>
-<td>محتوای جدول</td>
-<td>محتوای جدول</td>
-<td>محتوای جدول</td>
-</tr>
-</table>
-<!-- جدول شماره 3 -->
-<table id="table-3">
-<caption>
-جدول شماره 3
-</caption>
-<tr>
-<th class="col-1">تیتر th</th>
-<th class="col-1">تیتر th</th>
-<th class="col-1" rowspan="3">تیتر th rowspan</th>
-</tr>
-<tr>
-<td>سلول 1</td>
-<td>سلول 2</td>
-</tr>
-<tr>
-<td>سلول 3</td>
-<td>سلول 4</td>
-</tr>
-</table>
-<div class="clear"></div>
-<!-- جدول شماره 4 -->
-<table id="table-4">
-<caption>
-جدول شماره 4
-</caption>
-<tr>
-<th>تیتر 1</th>
-<td class="col-1">سلول 1</td>
-<td class="col-1">سلول 2</td>
-</tr>
-<tr>
-<th>تیتر 2</th>
-<td class="col-2">سلول 3</td>
-<td class="col-2">سلول 4</td>
-</tr>
-<tr>
-<th>تیتر 3</th>
-<td class="col-3">سلول 5</td>
-<td class="col-3">سلول 6</td>
-</tr>
-</table>
+<!-- Webgoo.ir -->
+ <header>
+<h1>تیتر اصلی صفحه</h1>
+<img src="site-logo.png" alt="logo">
+</header>
+<nav>
+<ul>
+<li><a href="/home">صفحه نخست</a></li>
+<li><a href="/about">درباره ما</a></li>
+<li><a href="/contact">اطلاعات تماس</a></li>
+<li><a href="/learn">آموزش آنلاین</a></li>
+</ul>
+</nav> 
+<main>
+<section>
+    <p>این فروشگاه در تاریخ<time datetime="2017-03-11T19:00">بیست و یکم اسفند ساعت 19</time>افتتاح خواهد شد.</p>
+<h1>مقالات بخش آموزش</h1>
+<article>
+<figure>
+<img src="http://yoursite.com/image/html.jpg" alt="HTML Semantic">
+</figure>
+<aside>نصب ویندوز از طریق حافظه های جانبی مانند فلش مموری نیز امکانپذیر است.</aside>
+<h2>مبحث توابع در برنامه نویسی</h2>
+<p>توابع در برنامه نویسی مانند ماشین هایی هستند که مواد خام را به عنوان ورودی گرفته و یک یا چند محصول به عنوان خروجی تولید می کنند...</p>
+</article>   
+</section>
+</main>
+<footer>
+<div class="copyright">&copy; 2017 https://webgoo.ir</div>
+</footer>
+<section><h1>برنامه نویسی وب</h1>
+<p>آموزش برنامه نویسی وب</p>
+</section>
+<h1>HTML</h1>
+<p>آموزش HTML</p>
+<img src="html.jpg" alt="html">
+<section>
+<h1>مقالات بخش آموزش</h1>
+<article>
+<h2>مبحث توابع در برنامه نویسی</h2>
+<p>توابع در برنامه نویسی مانند ماشین هایی هستند که مواد خام را به عنوان ورودی گرفته و یک یا چند محصول به عنوان خروجی تولید می کنند...</p>
+</article>   
+</section>
+<details>
+<summary>جزئیات بیشتر</summary>
+این اطلاعات در صورتی نمایش داده می شود که بر روی عبارت "جزئیات بیشتر" کلیک کنیم
+</details>
+<p>این فروشگاه در تاریخ<mark>بیست و یکم اسفند ساعت 19</mark>افتتاح خواهد شد.</p>
 </body>
 </html>

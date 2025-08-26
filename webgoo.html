@@ -1,54 +1,55 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>وبگو | ایجاد حاشیه و نمایش محتوا در CSS</title>
+<title>وبگو | تنظيم تگ ul و li با استايل CSS</title>
 <!-- Webgoo.ir -->
 <style>
-body {
-    font-family: Tahoma, Geneva, sans-serif;
-    font-size: 12px;
-    direction: rtl;
-    margin: 0px;
-    padding: 0px;
-    background-color: #333;
-    color: #CCC;
-    padding: 4px;
+body{
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:12px;
+    direction:rtl;
 }
-#parent-block {
-    display: block;
-    background-color: #999;
-    height: 400px;
-    width: 400px;
-    margin-top: 10px;
-    margin-right: auto;
-    margin-bottom: 10px;
-    margin-left: auto;
-    padding: 10px;
-    border: 4px solid #FFF;
+ul{
+    list-style:none;
+    list-style-image:url(list-item-ul.png);
+    list-style-position:inside;
 }
-.child-block {
-    display: block;
-    text-align: justify;
-    color: #333;
-    background-color: #CCF;
-    height: 380px;
-    width: 380px;
-    margin: 10px;
-    padding: 10px;
-    border: 4px solid #666;
-    box-sizing: border-box;
+.li-1{
+    list-style:none;
+    list-style-image:url(list-item-ul.png);
+    list-style-position:inside;
+    color: #c00;
+}
+.li-2{
+    list-style:none;
+    list-style-image:url(list-item-li.png);
+    list-style-position:inside;
+    color: #c08;
 }
 </style>
 </head>
 <body>
-<div id="parent-block">
-<div class="child-block">
-ویژگی margin فاصله دو بلاک از هم یا از تگ والد و ویژگی padding میزان فاصله و حاشیه ی محتوا یا عناصر درونی یک بلاک را در صفحات وب مشخص می کنند.
-</div>
-</div>
+    <ul>
+<li>لیست اصلی بدون زیر مجموعه</li>
+<li>
+لیست اصلی با زیر مجموعه
+<ul><li>لیست فرعی و زیر مجموعه اول
+<ul><li>لیست فرعی و زیر مجموعه دوم</li></ul>
+</li></ul>
+</li>
+</ul>
+<ul>
+<li class="li-1">ليست اصلي بدون زير مجموعه</li>
+<li class="li-1">
+ليست اصلي با زير مجموعه
+<ul><li class="li-2">ليست فرعي و زير مجموعه اول
+<ul><li class="li-2">ليست فرعي و زير مجموعه دوم</li></ul>
+</li></ul>
+</li>
+</ul>
 <hr>
-با تنظیم مقادیر margin-right و margin-left به صورت auto بلاک div در وسط صفحه تنظیم می شود.
+در اين نمونه کد نحوه چينش صحيح تگ ul و li به صورت تو در تو و کاربرد کلاس CSS براي اعمال استايل ظاهري به تگ هاي HTML مشخص شده است.
 </body>
 </html>

@@ -1,59 +1,64 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>وبگو | خاصیت width در css</title>
-<style type="text/css">
-body{
-    font-family:Tahoma, Geneva, sans-serif;
-    font-size:12px;
-    direction:rtl;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.block-1 {
+    width: 200px;
+    height: 100px;
+    margin: 8px;
+    border: #4DC100 solid 1px;
 }
-.block{
-    width:500px;
-    height:100px;
-    border:1px solid #999;
-    background-color:#FC0;
-    margin:4px;
+.block-2 {
+    width: 200px;
+    height: 100px;
+    margin: 8px;
+    border: outset #5B00C1 1px;
 }
-.main{
-    width:800px;
-    height:200px;
-    border:1px solid #999;
-    background-color:#CCC;
-    margin:4px;
-    padding:4px;
+.block-3 {
+    width: 200px;
+    height: 100px;
+    margin: 8px;
+    border: groove #525351 1px;
 }
-.layer{
-    width:50%;
-    height:50%;
-    border:1px solid #999;
-    background-color:#6CF;
+.block-4 {
+    width: 200px;
+    height: 100px;
+    margin: 8px;
+    border: dashed #a01d5e 1px;
 }
-#my-css{
-    border:1px solid #999;
-    background-color:#6C6;
-    margin:4px;   
-     max-width:50px;
-    max-height:50px;
-    overflow:scroll;    
+.block-5 {
+    width: 200px;
+    height: 100px;
+    margin: 8px;
+    border: dashed #c16d00 1px;
+}
+.block-6 {
+    width: 200px;
+    height: 100px;
+    margin: 8px;
+    border: double #00b4c1 1px;
+}
+#block {
+    display: table;
+    width: 500px;    
+    height: 350px;
+    border-top: #333 solid medium;
+    border-bottom: #666 dashed thin;
+    border-left: #999 dotted thick;
+    border-right: #CCC inset 1px;
 }
 </style>
-</head>
+<div id="block">CSS Border</div>
 <body>
-<div class="block">
-متن در کلاس block - مقدار دهی پیکسلی
-</div>
-<div class="main">
-<div class="layer">
-متن در کلاس layer - مقدار دهی درصدی
-</div>
-بلاک والد در کلاس main - مقدار دهی پیکسلی
-</div>
-<div id="my-css">
-متن در آی دی my-css - مقداردهی با em
-</div>
-<hr />
-علاوه بر بلاک های div، خاصیت های عرض و ارتفاع در css بر روی سایر تگ ها مانند جداول، پاراگراف ها، تصاویر و... نیز می توانند تاثیر گذار باشند.
+<div class="block-1"></div>
+<div class="block-2"></div>
+<div class="block-3"></div>
+<div class="block-4"></div>
+<div class="block-5"></div>
+<div class="block-6"></div>
 </body>
 </html>

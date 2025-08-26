@@ -1,57 +1,60 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>وبگو | ترسیم جداول در صفحات وب</title>
-</head>
-<!-- Webgoo.ir -->
- <header>
-<h1>تیتر اصلی صفحه</h1>
-<img src="site-logo.png" alt="logo">
-</header>
-<nav>
-<ul>
-<li><a href="/home">صفحه نخست</a></li>
-<li><a href="/about">درباره ما</a></li>
-<li><a href="/contact">اطلاعات تماس</a></li>
-<li><a href="/learn">آموزش آنلاین</a></li>
-</ul>
-</nav> 
-<main>
-<section>
-    <p>این فروشگاه در تاریخ<time datetime="2017-03-11T19:00">بیست و یکم اسفند ساعت 19</time>افتتاح خواهد شد.</p>
-<h1>مقالات بخش آموزش</h1>
-<article>
-<figure>
-<img src="http://yoursite.com/image/html.jpg" alt="HTML Semantic">
-</figure>
-<aside>نصب ویندوز از طریق حافظه های جانبی مانند فلش مموری نیز امکانپذیر است.</aside>
-<h2>مبحث توابع در برنامه نویسی</h2>
-<p>توابع در برنامه نویسی مانند ماشین هایی هستند که مواد خام را به عنوان ورودی گرفته و یک یا چند محصول به عنوان خروجی تولید می کنند...</p>
-</article>   
-</section>
-</main>
-<footer>
-<div class="copyright">&copy; 2017 https://webgoo.ir</div>
-</footer>
-<section><h1>برنامه نویسی وب</h1>
-<p>آموزش برنامه نویسی وب</p>
-</section>
-<h1>HTML</h1>
-<p>آموزش HTML</p>
-<img src="html.jpg" alt="html">
-<section>
-<h1>مقالات بخش آموزش</h1>
-<article>
-<h2>مبحث توابع در برنامه نویسی</h2>
-<p>توابع در برنامه نویسی مانند ماشین هایی هستند که مواد خام را به عنوان ورودی گرفته و یک یا چند محصول به عنوان خروجی تولید می کنند...</p>
-</article>   
-</section>
-<details>
-<summary>جزئیات بیشتر</summary>
-این اطلاعات در صورتی نمایش داده می شود که بر روی عبارت "جزئیات بیشتر" کلیک کنیم
-</details>
-<p>این فروشگاه در تاریخ<mark>بیست و یکم اسفند ساعت 19</mark>افتتاح خواهد شد.</p>
-</body>
-</html>
+<style>
+.static {
+    position: static;    
+    width: 200px;
+    height: 100px;
+    background: #88C2FF;}
+.relative {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    background: #F90;
+    border: 1px solid #999;
+    top: 40px;
+}
+.relative {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    background: #F90;
+    border: 1px solid #999;
+}
+.absolute {
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    background: #F90;
+    border: 1px solid #999;
+    top: 30px;
+    left: -30%;
+}
+.fixed {
+    position: fixed;
+    width: 200px;
+    height: 100px;
+    background: #FF9A9B;
+    border: 1px solid #999;
+    top: 8px;
+    left: 8px;
+}
+.float {
+    width: 100px;
+    height: 100px;
+    background: #42e457;
+    color: #FFFFFF;
+    float: right;
+    padding: 4px;
+    margin: 4px;
+    text-align: right;
+}
+</style>
+<div class="float">بلاک مربوط به نمایش تصویر بندانگشتی در مطلب با خاصیت float و مقدار left</div><br>
+<div class="fixed">بلاک با خاصیت position fixed</div>
+<div class="relative">
+بلاک والد با خاصیت position relative
+<div class="absolute">
+بلاک فرزند با خاصیت position absolute
+</div>
+</div>
+<div class="relative">بلاک با خاصیت position relative</div><br>
+<div class="static">بلاک با خاصیت position static</div>

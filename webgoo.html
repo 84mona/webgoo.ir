@@ -1,60 +1,84 @@
-<style>
-.static {
-    position: static;    
-    width: 200px;
-    height: 100px;
-    background: #88C2FF;}
-.relative {
-    position: relative;
-    width: 200px;
-    height: 100px;
-    background: #F90;
-    border: 1px solid #999;
-    top: 40px;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>وبگو | ویژگی display block در css</title>
+<!-- https://webgoo.ir -->
+<style type="text/css">
+body{
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:12px;
+    direction:rtl;
 }
-.relative {
-    position: relative;
-    width: 200px;
-    height: 100px;
-    background: #F90;
-    border: 1px solid #999;
+.block-1{
+    display:table;
+    height:200px;
+    width:600px;
+    border:1px solid #999;
+    background:#F60;
+    padding:4px;
+    margin-bottom:8px;
 }
-.absolute {
-    position: absolute;
-    width: 220px;
-    height: 50px;
-    background: #F90;
-    border: 1px solid #999;
-    top: 30px;
-    left: -30%;
+.block-2{
+    display:inline;
+    height:200px;
+    width:200px;
+    border:1px solid #999;
+    background:#39C;
+    margin-bottom:8px;    
 }
-.fixed {
-    position: fixed;
-    width: 200px;
-    height: 100px;
-    background: #FF9A9B;
-    border: 1px solid #999;
-    top: 8px;
-    left: 8px;
+.block-3{
+    display:inline-block;
+    height:200px;
+    width:200px;
+    border:1px solid #999;
+    background:#FC0;
+    margin-bottom:8px;    
 }
-.float {
-    width: 100px;
-    height: 100px;
-    background: #42e457;
-    color: #FFFFFF;
-    float: right;
-    padding: 4px;
-    margin: 4px;
-    text-align: right;
+.block-4{
+    display:inline-table;
+    height:200px;
+    width:200px;
+    border:1px solid #999;
+    background:#39C;
+    margin-bottom:8px;    
+}
+.block-5{
+    display:table-cell;
+    height:200px;
+    width:200px;
+    border:1px solid #999;
+    background:#FC0;
+    margin-bottom:8px;    
+}
+.block-6{
+    display:list-item;
+    height:200px;
+    width:200px;
+    border:1px solid #999;
+    background:#FC0;
+    margin-bottom:8px;    
 }
 </style>
-<div class="float">بلاک مربوط به نمایش تصویر بندانگشتی در مطلب با خاصیت float و مقدار left</div><br>
-<div class="fixed">بلاک با خاصیت position fixed</div>
-<div class="relative">
-بلاک والد با خاصیت position relative
-<div class="absolute">
-بلاک فرزند با خاصیت position absolute
+</head>
+<body>
+<div class="block-1">
+display:block 1
 </div>
+<div class="block-2">
+display:block 2
 </div>
-<div class="relative">بلاک با خاصیت position relative</div><br>
-<div class="static">بلاک با خاصیت position static</div>
+<div class="block-3">
+display:block 3
+</div>
+<div class="block-4">
+display:block 4
+</div>
+<div class="block-5">
+display:block 5
+</div>
+<div class="block-6">
+display:block 6
+</div>
+</body>
+</html>

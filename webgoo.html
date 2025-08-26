@@ -1,64 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-<script type="text/javascript">
-var now =  new Date();
-alert(now);
-</script>
-<script type="text/javascript">
-var now =  new Date();
-var day = now.getDate();
-alert(day);
-</script>
-<script type="text/javascript">
-var now =  new Date();
-var day = now.getDay();
-alert(day);
-</script>
-<script type="text/javascript">
-var now =  new Date();
-var full_year = now.getFullYear();
-alert(full_year);
-</script>
-<script type="text/javascript">
-var now =  new Date();
-var hour = now.getHours();
-alert(hour);
-</script>
-<script type="text/javascript">
-var now =  new Date();
-var millisecond = now.getMilliseconds();
-alert(millisecond);
-</script>
-<script type="text/javascript">
-var now =  new Date();
-var minute = now.getMinutes();
-alert(minute);
-</script>
-<script type="text/javascript">
-var now =  new Date();
-var month = now.getMonth();
-alert(month);
-</script>
-<script type="text/javascript">
-var now =  new Date();
-now.setDate(22);
-day = now.getDate();
-alert(day);
-</script>
-</head>
-<body>
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>وبگو | date و time در جاوا اسکریپت</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>وبگو | کاربرد Pop-up در جاوا اسکریپت</title>
 <!-- https://webgoo.ir -->
 <style type="text/css">
 body{
@@ -66,25 +10,65 @@ body{
     font-size:12px;
     direction:rtl;
 }
-#date{
-    direction:ltr;
-}
 </style>
-<script type="text/javascript">
-function RefreshDate(){
-    var refresh_date = setTimeout('ShowDate();', 1000);
-}
-function ShowDate(){
-    var now =  new Date();
-    var show = document.getElementById('date').innerHTML = now;
-    var refresh_date = RefreshDate();
-}
-</script>
 </head>
-<body onload="ShowDate();">
-<noscript>جاوا اسکریپت در مرورگر شما غیرفعال است یا پشتیبانی نمی شود.</noscript>
-<div id="date"></div>
-<hr>
-با استفاده از Date و setTimeout می توان تاریخ و زمان را به صورت داینامیک نمایش داد.
+<body>
+<noscript>
+جاوا اسکریپت در مرورگر شما غیر فعال است!
+</noscript>
+دستور alert:<br /><br />
+<script type="text/javascript">
+//<![CDATA[
+function getuser(name){
+    alert(" سلام " + name + "!\n به آموزش جاوا اسکریپت خوش آمدید ");
+}
+//]]>
+</script>
+<label for="name">نام شما:</label>
+<input id="name" name="name" type="text" />
+<input type="button" value="کلیک کنید" onclick="getuser(document.getElementById('name').value)" />
+<hr />
+دستور confirm:<br /><br />
+<script type="text/javascript">
+//<![CDATA[
+function confirmed(){
+    var check = confirm("آیا حذف این پیام را تایید می کنید؟");
+    if (check == 1){
+        document.getElementById('text').innerHTML = '';
+        alert("پیام حذف شد");
+    }
+    else{
+        document.getElementById('text').innerHTML = 'در صورت تایید، این پیام حذف خواهد شد';
+        alert("حذف پیام لغو شد");
+    }
+}
+//]]>
+</script>
+<div id="text">در صورت تایید، این پیام حذف خواهد شد</div>
+<input type="button" value="تایید" onclick="confirmed()" />
+<hr />
+دستور window.open:<br /><br />
+<script type="text/javascript">
+//<![CDATA[
+function WinOpen(){
+    var url = "https://webgoo.ir";
+    window.open(url, 'وبگو | آموزش برنامه نویسی و مهارتهای وب', "height=600, width=800, resizable=1, left=0, top=0, status=1, scrollbars=yes");
+}
+//]]>
+</script>
+<input type="button" value="پنجره جدید" onclick="WinOpen()" />
+<hr />
+دستور prompt:<br /><br />
+<script type="text/javascript">
+//<![CDATA[
+function welcome(){
+    var name = prompt("لطفا نام خود را وارد کنید","ناشناس");
+    if (name != null && name != ''){
+        alert(" سلام " + name + "! به آموزش جاوا اسکریپت خوش آمدید ");
+    }
+}
+//]]>
+</script>
+<input type="button" value="کلیک کنید" onclick="welcome()" />
 </body>
 </html>

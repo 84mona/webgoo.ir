@@ -1,107 +1,90 @@
-<input id="test" type="text" value="1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
 <script type="text/javascript">
-var input = document.getElementById('test').value;
-alert(input);
+var now =  new Date();
+alert(now);
 </script>
 <script type="text/javascript">
-var input = document.getElementById('test').value;
-alert(input);
+var now =  new Date();
+var day = now.getDate();
+alert(day);
 </script>
-<input id="test" type="text" value="1">
 <script type="text/javascript">
-function SetValue(id){
-    var element = document.getElementById(id);
-    //دریافت مقادیر از عنصر مورد نظر
-    var value = element.innerHTML;
-    alert(value);
-}
+var now =  new Date();
+var day = now.getDay();
+alert(day);
 </script>
-<input type="button" onclick="SetValue('result');" value="کلیک کنید">
-<div id="result">این یک تست است</div>
 <script type="text/javascript">
-function SetValue(id, value){
-    var element = document.getElementById(id);
-    //اختصاص مقدار به عنصر مورد نظر
-    element.innerHTML = value;
-}
+var now =  new Date();
+var full_year = now.getFullYear();
+alert(full_year);
 </script>
-<input type="button" onclick="SetValue('result', 'این یک تست است');" value="کلیک کنید">
-<div id="result"></div>
-<!doctype html>
+<script type="text/javascript">
+var now =  new Date();
+var hour = now.getHours();
+alert(hour);
+</script>
+<script type="text/javascript">
+var now =  new Date();
+var millisecond = now.getMilliseconds();
+alert(millisecond);
+</script>
+<script type="text/javascript">
+var now =  new Date();
+var minute = now.getMinutes();
+alert(minute);
+</script>
+<script type="text/javascript">
+var now =  new Date();
+var month = now.getMonth();
+alert(month);
+</script>
+<script type="text/javascript">
+var now =  new Date();
+now.setDate(22);
+day = now.getDate();
+alert(day);
+</script>
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>وبگو | کاربرد متد getElementById و innerHTML</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>وبگو | date و time در جاوا اسکریپت</title>
 <!-- https://webgoo.ir -->
 <style type="text/css">
 body{
     font-family:Tahoma, Geneva, sans-serif;
     font-size:12px;
     direction:rtl;
-    line-height:20px;
 }
-#text-box{
-    padding:6px;
-    background:#CCC;
-}
-#test-block{
-    padding:6px;
-    background:#CCF;
-    cursor:pointer;    
+#date{
+    direction:ltr;
 }
 </style>
+<script type="text/javascript">
+function RefreshDate(){
+    var refresh_date = setTimeout('ShowDate();', 1000);
+}
+function ShowDate(){
+    var now =  new Date();
+    var show = document.getElementById('date').innerHTML = now;
+    var refresh_date = RefreshDate();
+}
+</script>
 </head>
-<body>
-<noscript>
-جاوا اسکریپت در مرورگر شما غیر فعال است یا پشتیبانی نمی شود!<br>
-</noscript>
-<input id="test" type="text" value="یک مقدار وارد کنید">
-<input type="button" value="کلیک کنید" onclick="AlertValue('test');">
-<script type="text/javascript">
-function AlertValue(id){
-    var value = document.getElementById(id).value;
-    alert(value);
-}
-</script>
-<br><br>
-آرگومان متد getElementById همان id عنصر HTML مورد نظر است.
-<hr><br>
-<div id="text-box">پس از کلیک بر روی دکمه تغییر رنگ و اجرای تابع ChangeColor، با استفاده از متد getElementById و style رنگ پس زمینه این بلاک تغییر می کند!</div><br>
-<input type="button" value="تغییر رنگ" onclick="ChangeColor('text-box');">
-<input type="button" value="رنگ پیش فرض" onclick="DefaultColor('text-box');">
-<script type="text/javascript">
-function ChangeColor(id){
-    var block = document.getElementById(id);
-    block.style.backgroundColor = "#FC0";        
-}
-function DefaultColor(id){
-    var block = document.getElementById(id);
-    block.style.backgroundColor = "#CCC";        
-}
-</script>
-<hr><br>
-<input id="text-input" type="text" onkeyup="InnerChange(this.id);"><br>
-<div id="inner-text"></div>
-<script type="text/javascript">
-function InnerChange(id){
-    var element = document.getElementById(id);
-    var value = element.value;
-    document.getElementById('inner-text').innerHTML = value;
-}
-</script>
-<br><br>
-پس از تایپ عبارت در فیلد بالا، رویداد onkeyup اجرا شده و تابع InnerChange فراخوانی می شود، در این مثال از متد innerHTML استفاده کرده ایم.<br>
-نکته: با استفاده از عبارت کلیدی this.id می توانید به صورت خودکار id بلاک یا تگ input مورد نظر را به کدهای خود بدهید.
-<hr><br>
-<div id="test-block" onclick="GetText(this.id);">این یک متن آزمایشی است!</div>
-<script type="text/javascript">
-function GetText(id){
-    var element = document.getElementById(id);
-    var text = element.innerHTML;
-    alert(text);
-}
-</script>
-<br><br>
-برای دریافت متن داخل بلاک div با استفاده از متد innerHTML، در داخل کادر رنگی بالا کلیک کنید.
+<body onload="ShowDate();">
+<noscript>جاوا اسکریپت در مرورگر شما غیرفعال است یا پشتیبانی نمی شود.</noscript>
+<div id="date"></div>
+<hr>
+با استفاده از Date و setTimeout می توان تاریخ و زمان را به صورت داینامیک نمایش داد.
 </body>
 </html>

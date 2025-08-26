@@ -1,64 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>وبگو | کار با خطوط border و outline در CSS</title>
+<!-- Webgoo.ir -->
 <style>
-.block-1 {
-    width: 200px;
-    height: 100px;
-    margin: 8px;
-    border: #4DC100 solid 1px;
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    direction: rtl;
 }
-.block-2 {
-    width: 200px;
+.block {
+    display: block;
     height: 100px;
-    margin: 8px;
-    border: outset #5B00C1 1px;
+    width: 100px;
+    border: #333 thick solid;
 }
-.block-3 {
-    width: 200px;
+.block-dot {
+    display: block;
     height: 100px;
-    margin: 8px;
-    border: groove #525351 1px;
+    width: 100px;
+    border: #F60 2px dotted;
 }
-.block-4 {
-    width: 200px;
+.block-multi {
+    display: block;
     height: 100px;
-    margin: 8px;
-    border: dashed #a01d5e 1px;
+    width: 100px;
+    border-bottom: #666 dashed 2px;
+    border-top: #F60 solid 2px;
+    border-left: #9C0 dotted 2px;
+    border-right: #69F double;
 }
-.block-5 {
-    width: 200px;
+.outblock {
+    display: block;
     height: 100px;
-    margin: 8px;
-    border: dashed #c16d00 1px;
+    width: 100px;
+    border: #333 thick solid;
+    outline: #090 thick dashed;
 }
-.block-6 {
-    width: 200px;
+.outblock-dot {
+    display: block;
     height: 100px;
-    margin: 8px;
-    border: double #00b4c1 1px;
+    width: 100px;
+    border: #F60 2px dotted;
+    outline: #F00 2px solid;
 }
-#block {
-    display: table;
-    width: 500px;    
-    height: 350px;
-    border-top: #333 solid medium;
-    border-bottom: #666 dashed thin;
-    border-left: #999 dotted thick;
-    border-right: #CCC inset 1px;
+.outblock-multi {
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-bottom: #666 dashed 2px;
+    border-top: #F60 solid 2px;
+    border-left: #9C0 dotted 2px;
+    border-right: #69F double;
+    outline-color: #CCC;
+    outline-style: double;
+    outline-width: thick;
+}
+.block-radius {
+    display: block;
+    height: 100px;
+    width: 100px;
+    border: #999 2px solid;
+    border-radius: 16px;
+}
+.input {
+    height: 30px;
+    width: 250px;
+    background: #F5F5F5;
+    border: #666 1px solid;
+    border-radius: 4px;
+}
+.input:hover {
+    background: #F0F0F0;
+    border: #FFF 1px solid;
+    outline: #69F 1px solid;
+}
+.input:focus {
+    background: #F9F9F9;
+    border: #FFF 1px solid;
+    outline: #F00 1px solid;
 }
 </style>
-<div id="block">CSS Border</div>
+</head>
 <body>
-<div class="block-1"></div>
-<div class="block-2"></div>
-<div class="block-3"></div>
-<div class="block-4"></div>
-<div class="block-5"></div>
-<div class="block-6"></div>
+استفاده از خاصیت border برای ترسیم خطوط در بلاک div به صورت solid:
+<br><br>
+<div class="block">
+</div>
+<hr>
+استفاده از خاصیت border برای ترسیم خطوط در بلاک div به صورت dotted:
+<br><br>
+<div class="block-dot">
+</div>
+<hr>
+استفاده از خاصیت border برای ترسیم خطوط در بلاک div به صورت چندگانه:
+<br><br>
+<div class="block-multi">
+</div>
+<hr>
+استفاده از خاصیت های border و outline برای ترسیم خطوط در بلاک div به صورت solid و dashed:
+<br><br>
+<div class="outblock">
+</div>
+<hr>
+استفاده از خاصیت های border و outline برای ترسیم خطوط در بلاک div به صورت dotted و solid:
+<br><br>
+<div class="outblock-dot">
+</div>
+<hr>
+استفاده از خاصیت های border و outline برای ترسیم خطوط در بلاک div به صورت چندگانه:
+<br><br>
+<div class="outblock-multi">
+</div>
+<hr>
+استفاده از خاصیت های border و border-radius برای ترسیم خطوط در بلاک div به صورت گوشه های نرم و دارای انحنا:
+<br><br>
+<div class="block-radius">
+</div>
+<hr>
+استفاده از خاصیت های border، outline و border-radius برای ترسیم خطوط در فیلد input در حالت های مختلف نشانه گر ماوس (بردن ماوس بر روی فیلد (hover)، کلیک در فیلد (focus)):
+<br><br>
+<input type="text" class="input">
+<br><br>
 </body>
 </html>

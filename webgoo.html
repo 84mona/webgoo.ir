@@ -3,126 +3,52 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>وبگو | کار با خطوط border و outline در CSS</title>
+<title>وبگو | ایجاد حاشیه و نمایش محتوا در CSS</title>
 <!-- Webgoo.ir -->
 <style>
 body {
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 12px;
     direction: rtl;
+    margin: 0px;
+    padding: 0px;
+    background-color: #333;
+    color: #CCC;
+    padding: 4px;
 }
-.block {
+#parent-block {
     display: block;
-    height: 100px;
-    width: 100px;
-    border: #333 thick solid;
+    background-color: #999;
+    height: 400px;
+    width: 400px;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+    padding: 10px;
+    border: 4px solid #FFF;
 }
-.block-dot {
+.child-block {
     display: block;
-    height: 100px;
-    width: 100px;
-    border: #F60 2px dotted;
-}
-.block-multi {
-    display: block;
-    height: 100px;
-    width: 100px;
-    border-bottom: #666 dashed 2px;
-    border-top: #F60 solid 2px;
-    border-left: #9C0 dotted 2px;
-    border-right: #69F double;
-}
-.outblock {
-    display: block;
-    height: 100px;
-    width: 100px;
-    border: #333 thick solid;
-    outline: #090 thick dashed;
-}
-.outblock-dot {
-    display: block;
-    height: 100px;
-    width: 100px;
-    border: #F60 2px dotted;
-    outline: #F00 2px solid;
-}
-.outblock-multi {
-    display: block;
-    height: 100px;
-    width: 100px;
-    border-bottom: #666 dashed 2px;
-    border-top: #F60 solid 2px;
-    border-left: #9C0 dotted 2px;
-    border-right: #69F double;
-    outline-color: #CCC;
-    outline-style: double;
-    outline-width: thick;
-}
-.block-radius {
-    display: block;
-    height: 100px;
-    width: 100px;
-    border: #999 2px solid;
-    border-radius: 16px;
-}
-.input {
-    height: 30px;
-    width: 250px;
-    background: #F5F5F5;
-    border: #666 1px solid;
-    border-radius: 4px;
-}
-.input:hover {
-    background: #F0F0F0;
-    border: #FFF 1px solid;
-    outline: #69F 1px solid;
-}
-.input:focus {
-    background: #F9F9F9;
-    border: #FFF 1px solid;
-    outline: #F00 1px solid;
+    text-align: justify;
+    color: #333;
+    background-color: #CCF;
+    height: 380px;
+    width: 380px;
+    margin: 10px;
+    padding: 10px;
+    border: 4px solid #666;
+    box-sizing: border-box;
 }
 </style>
 </head>
 <body>
-استفاده از خاصیت border برای ترسیم خطوط در بلاک div به صورت solid:
-<br><br>
-<div class="block">
+<div id="parent-block">
+<div class="child-block">
+ویژگی margin فاصله دو بلاک از هم یا از تگ والد و ویژگی padding میزان فاصله و حاشیه ی محتوا یا عناصر درونی یک بلاک را در صفحات وب مشخص می کنند.
+</div>
 </div>
 <hr>
-استفاده از خاصیت border برای ترسیم خطوط در بلاک div به صورت dotted:
-<br><br>
-<div class="block-dot">
-</div>
-<hr>
-استفاده از خاصیت border برای ترسیم خطوط در بلاک div به صورت چندگانه:
-<br><br>
-<div class="block-multi">
-</div>
-<hr>
-استفاده از خاصیت های border و outline برای ترسیم خطوط در بلاک div به صورت solid و dashed:
-<br><br>
-<div class="outblock">
-</div>
-<hr>
-استفاده از خاصیت های border و outline برای ترسیم خطوط در بلاک div به صورت dotted و solid:
-<br><br>
-<div class="outblock-dot">
-</div>
-<hr>
-استفاده از خاصیت های border و outline برای ترسیم خطوط در بلاک div به صورت چندگانه:
-<br><br>
-<div class="outblock-multi">
-</div>
-<hr>
-استفاده از خاصیت های border و border-radius برای ترسیم خطوط در بلاک div به صورت گوشه های نرم و دارای انحنا:
-<br><br>
-<div class="block-radius">
-</div>
-<hr>
-استفاده از خاصیت های border، outline و border-radius برای ترسیم خطوط در فیلد input در حالت های مختلف نشانه گر ماوس (بردن ماوس بر روی فیلد (hover)، کلیک در فیلد (focus)):
-<br><br>
-<input type="text" class="input">
-<br><br>
+با تنظیم مقادیر margin-right و margin-left به صورت auto بلاک div در وسط صفحه تنظیم می شود.
 </body>
 </html>

@@ -1,74 +1,121 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>وبگو | کاربرد Pop-up در جاوا اسکریپت</title>
-<!-- https://webgoo.ir -->
-<style type="text/css">
-body{
-    font-family:Tahoma, Geneva, sans-serif;
-    font-size:12px;
-    direction:rtl;
-}
-</style>
-</head>
-<body>
-<noscript>
-جاوا اسکریپت در مرورگر شما غیر فعال است!
-</noscript>
-دستور alert:<br /><br />
-<script type="text/javascript">
-//<![CDATA[
-function getuser(name){
-    alert(" سلام " + name + "!\n به آموزش جاوا اسکریپت خوش آمدید ");
-}
-//]]>
+<script>
+var str_1 = 'Hello!';
+var array_1 = [1, 2, 3];
+console.log(Array.isArray(str_1));
+console.log(Array.isArray(array_1));
 </script>
-<label for="name">نام شما:</label>
-<input id="name" name="name" type="text" />
-<input type="button" value="کلیک کنید" onclick="getuser(document.getElementById('name').value)" />
-<hr />
-دستور confirm:<br /><br />
-<script type="text/javascript">
-//<![CDATA[
-function confirmed(){
-    var check = confirm("آیا حذف این پیام را تایید می کنید؟");
-    if (check == 1){
-        document.getElementById('text').innerHTML = '';
-        alert("پیام حذف شد");
-    }
-    else{
-        document.getElementById('text').innerHTML = 'در صورت تایید، این پیام حذف خواهد شد';
-        alert("حذف پیام لغو شد");
-    }
+<script>
+var array_1 = [1, 5, 2];
+var array_2 = [4, 9, 3];
+var array_3 = array_1.concat(array_2);
+for(var i = 0; i < array_3.length; i++){
+    alert('Index ' + i + ' Value is: ' + array_3[i]);
 }
-//]]>
 </script>
-<div id="text">در صورت تایید، این پیام حذف خواهد شد</div>
-<input type="button" value="تایید" onclick="confirmed()" />
-<hr />
-دستور window.open:<br /><br />
-<script type="text/javascript">
-//<![CDATA[
-function WinOpen(){
-    var url = "https://webgoo.ir";
-    window.open(url, 'وبگو | آموزش برنامه نویسی و مهارتهای وب', "height=600, width=800, resizable=1, left=0, top=0, status=1, scrollbars=yes");
+<script>
+var array_1 = ['Java', 'Script'];
+var array_2 = ['is', 'easy', 'to', 'learn'];
+alert(array_1.join('') + ' ' + array_2.join(' ') + '!');
+</script>
+<script>
+var array_1 = [1, 'a', new Date('11 Apr 2021 16:17:10 UTC')];
+var locale_string = array_1.toLocaleString('en', { timeZone: 'UTC' });
+console.log(locale_string);
+</script>
+<script>
+var array_1 = [66, 102, 323, 480];
+alert('Last Value is: ' + array_1.pop());
+array_1.forEach(function(element, index, array){
+    alert('Index ' + index + ' Value is: ' + element);
+})
+</script>
+<script>
+var array_1 = ['ir', 'com', 'net', 'org', 'info'];
+array_1.reverse();
+alert(array_1);
+</script>
+<script>
+var array_1 = ['ir', 'com', 'net', 'org', 'info'];
+var first_value = array_1.shift();
+alert('First Value is: ' + first_value + ' & array_1 Length is: ' + array_1.length);
+</script>
+<script>
+var array_1 = [2, 3, 4, 5];
+alert(array_1.unshift(0, 1));
+alert(array_1);
+</script>
+<script>
+var array_1 = ['Farvardin', 'Ordibehesht', 'Khordad', 'Tir', 'Mordad'];
+var array_2 = array_1.slice(2);
+alert(array_2);
+var array_3 = array_1.slice(1, 3);
+alert(array_3);
+</script>
+<script>
+var array_1 = [43, 70, 19];
+array_1.splice(1, 0, 44);
+alert(array_1);
+array_1.splice(2, -1, 85);
+alert(array_1);
+array_1.splice(0, 2);
+alert(array_1);
+array_1.splice(0, 1, 50);
+alert(array_1);
+</script>
+<script>
+var array_1 = [5, 3, 12, 9];
+alert(array_1.sort());
+alert(array_1.sort(function(a, b){return a - b;}));
+alert(array_1.sort(function(a, b){return b - a;}));
+var array_2 = ['B', 'C', 'A', 'D'];
+alert(array_2.sort());
+alert(array_2.sort(function(a, b){return a - b;}));
+alert(array_2.sort(function(a, b){return b - a;}));
+</script>
+<script>
+var array_1 = [1, 2, 3, 4, 5, 6, 7];
+alert(array_1.copyWithin(2));
+array_1 = [1, 2, 3, 4, 5, 6, 7];
+alert(array_1.copyWithin(-2));
+array_1 = [1, 2, 3, 4, 5, 6, 7];
+alert(array_1.copyWithin(1, 2));
+array_1 = [1, 2, 3, 4, 5, 6, 7];
+alert(array_1.copyWithin(2, 3, 5));
+</script>
+<script>
+function checkNumber(element, index, array){
+    return element === 4;
 }
-//]]>
+var array_1 = [0, 2, 3, 5];
+alert(array_1.find(checkNumber));
+var array_1 = [0, 2, 4, 5];
+alert(array_1.find(checkNumber));
 </script>
-<input type="button" value="پنجره جدید" onclick="WinOpen()" />
-<hr />
-دستور prompt:<br /><br />
-<script type="text/javascript">
-//<![CDATA[
-function welcome(){
-    var name = prompt("لطفا نام خود را وارد کنید","ناشناس");
-    if (name != null && name != ''){
-        alert(" سلام " + name + "! به آموزش جاوا اسکریپت خوش آمدید ");
-    }
+<script>
+var array_1 = [50, 45, 106, 70];
+var isLargeNumber = (element) => element > 100;
+alert(array_1.findIndex(isLargeNumber));
+function checkOddNumber(element, index, array){
+    return element % 2;
 }
-//]]>
+alert(array_1.findIndex(checkOddNumber));
 </script>
-<input type="button" value="کلیک کنید" onclick="welcome()" />
-</body>
-</html>
+<script>
+var array_1 = [1, 2, 3];
+function addToNumber(currentValue, index, array){
+        return [[currentValue], currentValue + 5];
+}
+console.log(array_1.flatMap(addToNumber));
+</script>
+<script>
+var array_1 = [1, 2, 3, 4];
+var array_2 = [];
+var result;
+function makeNewArray(accumulator, current_value, current_index, array_1){
+    result = accumulator + current_value;
+    array_2[current_index] = result;
+    return result;
+}
+array_1.reduceRight(makeNewArray);
+alert(array_2);
+</script>

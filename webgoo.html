@@ -3,122 +3,98 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>وبگو | آرایه ها در جاوا اسکریپت</title>
+<title>وبگو | تست و بررسی رویدادها در جاوا اسکریپت</title>
 <!-- Webgoo.ir -->
 <style>
-body{
+body {
     font-family: Tahoma, Geneva, sans-serif;
-    direction: rtl;
     font-size: 12px;
+    direction: rtl;
+}
+#black-block {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    display: block;
+    margin: 4px;
+}
+#show-text {
+    height: 20px;
 }
 </style>
 </head>
 <body>
-<noscript>
-جاوا اسکریپت در مرورگر شما غیر فعال است!<br>
-</noscript>
-تعریف آرایه با عبارت new Array:<br><br>
+<noscript>جاوا اسکریپت در مرورگر شما غیر فعال است!<br></noscript>
 <script>
-//تعریف متغیر اصلی آرایه
-var words = new Array();
-//تعریف کلیدهای زیر مجموعه و مقادیر
-words[0] = "آموزش";
-words[1] = "جاوا";
-words[2] = "اسکریپت";
-//گرفتن خروجی از مقادیر کلیدهای آرایه
-document.write(words[0] + ' ' + words[1] + ' ' + words[2]);
-</script>
-<hr>
-تعریف آرایه بالا به روش مختصرنویسی:<br><br>
-<script>
-//تعریف متغیر اصلی آرایه به همراه مقادیر
-var words = new Array("آموزش", "جاوا", "اسکریپت");
-//گرفتن خروجی از مقادیر ایندکس های آرایه
-document.write(words[0] + ' ' + words[1] + ' ' + words[2]);
-</script>
-<hr>
-تعریف آرایه با کاراکتر قلاب []:<br><br>
-<script>
-//تعریف متغیر اصلی آرایه
-var domains = [];
-//تعریف کلیدهای زیر مجموعه و مقادیر
-domains[0] = "ir";
-domains[1] = "com";
-domains[2] = "net";
-//گرفتن خروجی از مقادیر کلیدهای آرایه
-document.write('Key 0: ' + domains[0] + '<br>Key 1: ' + domains[1] + '<br>Key 2: ' + domains[2]);
-</script>
-<hr>
-تعریف آرایه بالا به روش مختصرنویسی:<br><br>
-<script>
-//تعریف متغیر اصلی آرایه و مقادیر
-var domains = ["ir", "com", "net"];
-//گرفتن خروجی از مقادیر ایندکس های آرایه
-document.write('Index 0: ' + domains[0] + '<br>Index 1: ' + domains[1] + '<br>Index 2: ' + domains[2]);
-</script>
-<hr>
-تعریف آرایه دو بعدی:<br><br>
-<script>
-//تعریف متغیر اصلی آرایه
-var continent = new Array();
-//تعریف کلیدهای زیر مجموعه و مقادیر
-continent[0] = ["Iran", "Afghanistan", "Japan"];
-continent[1] = ["France", "Germany", "Norway"];
-continent[2] = ["Brazil", "USA", "Argentina"];
-//گرفتن خروجی از مقادیر کلیدهای آرایه
-document.write('Key 0,0: ' + continent[0][0] + '<br> Key 1,1: ' + continent[1][1] + '<br> Key 2,2: ' + continent[2][2]);
-</script>
-<hr>
-تعریف آرایه چندبعدی:<br><br>
-<script>
-//تعریف متغیر اصلی آرایه
-var continent = [];
-//تعریف کلیدهای زیر مجموعه و مقادیر
-continent[0] = [];
-continent[0][0] = ["Iran", "Afghanistan", "Japan"];
-continent[1] = [];
-continent[1][0] = ["France", "Germany", "Norway"];
-continent[2] = [];
-continent[2][0] = ["Brazil", "USA", "Argentina"];
-//گرفتن خروجی از مقادیر کلیدهای آرایه
-document.write('Key 0,0,0: ' + continent[0][0][0] + '<br> Key 1,0,1: ' + continent[1][0][1] + '<br> Key 2,0,2: ' + continent[2][0][2]);
-</script>
-<hr>
-تعریف آرایه با کلیدهای متنی:<br><br>
-<script>
-var literal_1 = {first:'Farvardin', second:'Ordibehesht', third:'Khordad'};
-var literal_2 = {
-'name_1':literal_1,
-'name_2':new Array(1, 2, 3),
-'name_3':'Jalali Months'
-};
-document.write(literal_2['name_1']['first'] + ' is ' + literal_2['name_2'][0] + ' in ' + literal_2['name_3']);
-</script>
-<hr>
-استفاده از حلقه forEach در جاوا اسکریپت:<br><br>
-<script>
-var array_1 = ['JS', 'PHP', 'MySQL', [20, 14, 33]];
-var str = '';
-var all = 0;
-var loop = 1;
-function myFunction(element, index, array){
-    if(!Array.isArray(element)){
-        str += element;
-        
-        if((loop + 1) < array.length){
-            str += '&';
-        }
-    } else {
-        element.forEach((value) => {all += value;});
-    }
-    
-    if(loop === array.length){
-        document.write(str + ' = ' + all);
-    }
-    
-    loop++;
+function hello(){
+    alert("به آموزش جاوا اسکریپت خوش آمدید");
 }
-array_1.forEach(myFunction);
+
+function add(){
+        document.getElementById("show-text").innerHTML = "این متن با اجرا شدن رویداد onmouseover در بلاک div با آی دی فرضی show-text چاپ می شود، برای بررسی رویداد onmouseout نشانه گر را از محدوده این دکمه خارج کنید.";
+}
+
+function clean(){
+        document.getElementById("show-text").innerHTML = '';
+}
+</script>
+مثال برای رویداد onclick:
+<br><br>
+<input type="button" value="کلیک کنید" onclick="hello();">
+<hr>
+مثال برای رویداد onclick با شیوه addEventListener:
+<br><br>
+بر روی بلاک زیر کلیک کنید.
+<div id="black-block"></div>
+<script>
+var myblock = document.getElementById("black-block");
+
+function showText(){
+    alert("بر روی بلاک مشکی کلیک شد");
+}
+
+if(myblock.addEventListener){
+    //تمام مرورگرها به جزء اینترنت اکسپلورر نسخه 8 و ماقبل
+    myblock.addEventListener("click", showText, false);
+} else {
+    //اینترنت اکسپلورر نسخه 8 و ماقبل
+    myblock.attachEvent("onclick", showText);
+}
+</script>
+<hr>
+مثال برای رویدادهای onmouseover و onmouseout:
+<br><br>
+<input type="button" value="ماوس را بر روی این دکمه بیاورید" onmouseover="add();" onmouseout="clean();">
+<div id="show-text"></div>
+<hr>
+مثال برای رویدادهای onfocus و onblur:
+<br><br>
+<input type="text" value="در این فیلد کلیک کنید..." onfocus="myFocusFunc(this);" onblur="myBlurFunc(this);">
+<script>
+function myFocusFunc(element){
+    if(element.value == element.defaultValue){
+        element.value = '';
+    }
+}
+
+function myBlurFunc(element){
+    if(element.value == ''){
+        element.value = element.defaultValue;
+    }  
+}
+</script>
+<hr>
+مثال برای رویدادهای onkeydown و onkeyup:
+<br><br>
+<input type="text" id="first" placeholder="اینجا تایپ کنید..." onkeydown="myKeydownFunc(this);" onkeyup="myKeyupFunc(this);">
+<script>
+function myKeydownFunc(element){
+    element.style.color = "red";  
+}
+
+function myKeyupFunc(element){
+    element.style.color = "blue";    
+}
 </script>
 </body>
 </html>

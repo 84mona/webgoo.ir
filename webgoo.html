@@ -2,83 +2,58 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>وبگو | ویژگی display block در css</title>
-<!-- https://webgoo.ir -->
+<title>وبگو | خاصیت width در css</title>
 <style type="text/css">
 body{
     font-family:Tahoma, Geneva, sans-serif;
     font-size:12px;
     direction:rtl;
 }
-.block-1{
-    display:table;
-    height:200px;
-    width:600px;
+.block{
+    width:500px;
+    height:100px;
     border:1px solid #999;
-    background:#F60;
+    background-color:#FC0;
+    margin:4px;
+}
+.main{
+    width:800px;
+    height:200px;
+    border:1px solid #999;
+    background-color:#CCC;
+    margin:4px;
     padding:4px;
-    margin-bottom:8px;
 }
-.block-2{
-    display:inline;
-    height:200px;
-    width:200px;
+.layer{
+    width:50%;
+    height:50%;
     border:1px solid #999;
-    background:#39C;
-    margin-bottom:8px;    
+    background-color:#6CF;
 }
-.block-3{
-    display:inline-block;
-    height:200px;
-    width:200px;
+#my-css{
     border:1px solid #999;
-    background:#FC0;
-    margin-bottom:8px;    
-}
-.block-4{
-    display:inline-table;
-    height:200px;
-    width:200px;
-    border:1px solid #999;
-    background:#39C;
-    margin-bottom:8px;    
-}
-.block-5{
-    display:table-cell;
-    height:200px;
-    width:200px;
-    border:1px solid #999;
-    background:#FC0;
-    margin-bottom:8px;    
-}
-.block-6{
-    display:list-item;
-    height:200px;
-    width:200px;
-    border:1px solid #999;
-    background:#FC0;
-    margin-bottom:8px;    
+    background-color:#6C6;
+    margin:4px;   
+     max-width:50px;
+    max-height:50px;
+    overflow:scroll;    
 }
 </style>
 </head>
 <body>
-<div class="block-1">
-display:block 1
+<div class="block">
+متن در کلاس block - مقدار دهی پیکسلی
 </div>
-<div class="block-2">
-display:block 2
+<div class="main">
+<div class="layer">
+متن در کلاس layer - مقدار دهی درصدی
 </div>
-<div class="block-3">
-display:block 3
+بلاک والد در کلاس main - مقدار دهی پیکسلی
 </div>
-<div class="block-4">
-display:block 4
+<div id="my-css">
+متن در آی دی my-css - مقداردهی با em
 </div>
-<div class="block-5">
-display:block 5
-</div>
-<div class="block-6">
-display:block 6
-</div>
+<hr />
+علاوه بر بلاک های div، خاصیت های عرض و ارتفاع در css بر روی سایر تگ ها مانند جداول، پاراگراف ها، تصاویر و... نیز می توانند تاثیر گذار باشند.
 </body>
 </html>
